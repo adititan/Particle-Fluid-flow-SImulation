@@ -1,0 +1,399 @@
+\documentclass{article}
+%Preamble
+\usepackage{float}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{amsmath,amssymb}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\title{AE 625 -Particle Methods in Fluid Flow Simulation \\ Assignment 10: Report \\ PySPH - Lid Driven Cavity}
+\author{Aditi Taneja}
+\date{}
+
+%Preamble
+%\usepackage{graphicx}
+\begin{document}
+\pagenumbering{arabic}
+\maketitle
+
+\tableofcontents
+\newpage
+\section{Introduction} 
+Results for centreline velocity (u and v) in Lid Driven Cavity problem were obtained with the following combinations:
+\\
+Four types of kernels have been used
+\\
+-Cubic Spline
+\\
+-Gaussian
+\\
+-Quintic Spline
+\\
+-Wendland Quintic
+\\
+with hdx values varied as - 0.5, 1.0, 2.0
+\\nx has been varied from - 25, 50,100
+\\As a result, 36 combinations were formed, results for which are shown below.
+\\The results are also compared with respect to Ghia et al. 
+
+$Re = 100 $ 
+\\
+\newpage
+\section{Variation of Centreline velocity with change in kernel,nx and hdx}
+
+\subsection{hdx = 0.5}
+\subsubsection{kernel = cubic spline}
+
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{cubic_1/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{cubic_2/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{cubic_3/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+\newpage
+
+\subsubsection{kernel = Quintic spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{quad_1/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{quad_2/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{quad_3/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+\subsubsection{kernel = Gaussian spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{gauss_1/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{gauss_2/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{gauss_3/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+\subsubsection{kernel = Wendland Quintic spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{wenl_1/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{wenl_2/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{wenl_3/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+\newpage
+
+\subsection{hdx = 1.0}
+\subsubsection{kernel = cubic spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{cubic_4/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{cubic_5/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{cubic_6/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+\subsubsection{kernel = Quintic spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{quad_4/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{quad_5/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{quad_6/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+\subsubsection{kernel = Gaussian spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{gauss_4/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{gauss_5/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{gauss_6/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+\subsubsection{kernel = Wendland Quintic spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{wenl_4/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{wenl_5/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{wenl_6/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+\subsection{hdx = 2.0}
+\subsubsection{kernel = Cubic spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{cubic_7/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{cubic_8/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{cubic_9/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+\subsubsection{kernel = Quintic spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{quad_7/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{quad_8/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+\newpage
+
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{quad_9/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+\subsubsection{kernel = Gaussian spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{gauss_7/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{gauss_8/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{gauss_9/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+\subsubsection{kernel = Wendland Quintic spline}
+$nx = 25 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{wenl_7/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 50 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{wenl_8/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\newpage
+$nx = 100 $
+\\
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{wenl_9/centerline.png}
+\caption{Centreline velocities (y vs. u and v vs. x)}
+\label{figure:}
+\end{figure}
+
+\section{Results and Discussion}
+
+\begin{itemize}
+  \item Run time decreases as hdx is increased for a particular kernel and nx.
+  \item Run time inreases as nx is increased for a particular kernel and hdx.
+  \item For a particular hdx and nx, run time increases in the order - CubicSpline $<$ QuinticSpline $<$ WendlandQuinticSpline $<$ Gaussian
+  \item For hdx = 0.5, deviation of results from reference is much more pronounced than for hdx = 1.0 and hdx = 2.0 . This remains same for all hdx $<$ 1.0.
+  \item Smoothness of the plots obtained for computed centreline velocities increases (accuracy remaining almost same) when hdx is increases from 1.0 to 2.0 for cubic kernel.
+  \item For Wendland Quinstic Spline, Accuracy is very less for hdx = 1.0 as compared to hdx = 2.0.
+  \item For Gaussian kernel, the accuracy and smoothness remains almost same for both hdx = 1.0 and hdx = 2.0.
+  \item As nx is increased from 25 $->$ 50 $->$ 100, error in the computed values of centreline velocities and the reference values decreases.
+\end{itemize}
+
+\end{document}

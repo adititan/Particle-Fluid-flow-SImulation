@@ -1,0 +1,122 @@
+\documentclass{article}
+%Preamble
+\usepackage{float}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{amsmath,amssymb}
+\usepackage{graphics}
+\usepackage{graphicx}
+
+\title{AE 625 -Particle Methods in Fluid Flow Simulation \\ Assignment 7: Report \\ Viscous Flow around a Cylinder}
+\author{Aditi Taneja}
+\date{}
+
+%Preamble
+%\usepackage{graphicx}
+\begin{document}
+\pagenumbering{arabic}
+\maketitle
+
+Evolution of vortices around Cylinder
+
+$Re = 1000 $ 
+\\
+$Radius = 1.0 $
+\\
+$Number of Panels = 30$
+\\
+$delta\_t = 0.1 sec$
+\\
+$Free Stream Velocity = 1.0$
+
+\section{Vortex Dstibution Around Cylinder with time for a viscous Flow}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=12cm]{one.png}
+\caption{Vortices around the cylinder at time = 1 sec}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=12cm]{two.png}
+\caption{Vortices around the cylinder at time = 2 sec}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=12cm]{three.png}
+\caption{Vortices around the cylinder at time = 3 sec}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=12cm]{four.png}
+\caption{Vortices around the cylinder at time = 4 sec}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=12cm]{five.png}
+\caption{Vortices around the cylinder at time = 5 sec}
+\label{figure:}
+\end{figure}
+
+\newpage
+\section{Velocity Distribution for Viscous flow around a Cylinder}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=12cm]{streamlines.png}
+\caption{Velocity Distribution around Cylinder at 0 sec}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=12cm]{streamlines_one.png}
+\caption{Velocity Distribution around Cylinder after 1 sec}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=12cm]{streamlines_two.png}
+\caption{Velocity Distribution around Cylinder after 2 sec}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=12cm]{streamlines_three.png}
+\caption{Velocity Distribution around Cylinder after 3 sec}
+\label{figure:}
+\end{figure} 
+ 
+\begin{figure}[H] \label{figure}
+\includegraphics[width=12cm]{streamlines_four.png}
+\caption{Velocity Distribution around Cylinder after 4 sec}
+\label{figure:}
+\end{figure} 
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=12cm]{streamlines_five.png}
+\caption{Velocity Distribution around Cylinder after 5 sec}
+\label{figure:}
+\end{figure}
+\newpage
+
+\section{Close View to the Separated Region}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=12cm]{streamlines_separated.png}
+\caption{Separated Region at time = 5 sec}
+\label{figure:}
+\end{figure}
+\newpage
+
+\section{Variation of Drag Coefficient with time}
+(Smoothed with Moving average of Period 3)
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=12cm]{cd_V_time.png}
+\caption{Drag Coefficient vs. time}
+\label{figure:}
+\end{figure}
+
+\end{document}
