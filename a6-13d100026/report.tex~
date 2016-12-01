@@ -1,0 +1,130 @@
+\documentclass{article}
+%Preamble
+\usepackage{float}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{amsmath,amssymb}
+\usepackage{graphics}
+\usepackage{graphicx}
+
+\title{AE 625 -Particle Methods in Fluid Flow Simulation \\ Assignment 6: Report \\ Diffusion of a point Vortex using RVM}
+\author{Aditi Taneja}
+\date{}
+
+%Preamble
+\begin{document}
+\pagenumbering{arabic}
+\maketitle
+
+\section*{Remeshing and Vortex Blob distribution and Relative Error Distribution}
+$Grid size =  41*41 $ 
+\\
+$x\_limit  = -2 to 2$
+\\
+$y\_limit = -2 to 2$
+
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{remesh_100.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{vort_100.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{error_100.png}
+\caption{Comparision between the RVM method and Exact Solution}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{remesh_500.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{vort_500.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{error_500.png}
+\caption{Comparision between the RVM method and Exact Solution}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{remesh_1000.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{vort_1000.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{error_1000.png}
+\caption{Comparision between the RVM method and Exact Solution}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{remesh_3000.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{vort_3000.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{error_3000.png}
+\caption{Comparision between the RVM method and Exact Solution}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{remesh_10000.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{vort_10000.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{error_10000.png}
+\caption{Comparision between the RVM method and Exact Solution}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H]   \label{figure}
+\includegraphics[width=10cm]{remesh_100000.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{vort_100000.png}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{error_100000.png}
+\caption{Comparision between the RVM method and Exact Solution}
+\label{figure:}
+\end{figure}
+
+\begin{figure}[H] \label{figure}
+\includegraphics[width=10cm]{error_plot.png}
+\caption{Variation of RMS error with number of vortices}
+\label{figure:}
+\end{figure}
+
+\end{document}
